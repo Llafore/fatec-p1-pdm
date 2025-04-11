@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { Component } from "react"
+import { Busca } from './components/Busca.jsx'
 
-function App() {
+export default class App extends Component{
 
-  return (
-    <>
-      Hello, P1
-    </>
-  )
+  render() {
+    return (
+      <>
+        <div className="flex w-full">
+          <div className="flex w-6 justify-content-center p-4">
+            <Busca></Busca>
+          </div>
+        </div>
+      </>
+    )
+  }
 }
-
-export default App
