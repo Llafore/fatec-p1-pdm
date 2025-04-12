@@ -1,9 +1,9 @@
 import React from 'react'
 import LocalidadeCard from './LocalidadeCard'
 
-const LocalidadeLista = ({ localizacao }) => {
+const LocalidadeLista = ({ localizacoes }) => {
   return (
-    localizacao.map((localizacao) => (
+    localizacoes.map((localizacao) => (
         <LocalidadeCard 
         cep={localizacao.cep} 
         logradouro={localizacao.logradouro} 
