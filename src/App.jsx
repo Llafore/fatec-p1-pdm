@@ -56,7 +56,11 @@ export default class App extends Component{
         <div className='flex w-full'>
             <div className="flex-column w-6 justify-content-center p-4">
               <Busca onBuscaRealizada={this.onBuscaRealizada}/>
-              <LocalidadeLista localizacoes={this.state.localidadesChumbadas}/>
+              <LocalidadeLista localizacoes={
+                this.state.localidades.length === 0
+                ? this.state.localidadesChumbadas
+                : this.state.localidades
+                }/>
             </div>
         </div>
       </>
