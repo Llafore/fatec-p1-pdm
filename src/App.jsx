@@ -2,6 +2,7 @@ import cepClient from "./utils/cepClient.js"
 import { Component } from "react"
 import { Busca } from './components/Busca.jsx'
 import LocalidadeLista from './components/LocalidadeLista'
+import Grafico from "./components/Grafico.jsx"
 
 export default class App extends Component{
 
@@ -62,6 +63,13 @@ export default class App extends Component{
                 : this.state.localidades
                 }/>
             </div>
+            <div className="flex-column w-6 justify-content-center p-4">
+              <Grafico localizacoes={
+                  this.state.localidades.length === 0
+                  ? this.state.localidadesChumbadas
+                  : this.state.localidades
+                  }/>
+            </div> 
         </div>
       </>
     )
