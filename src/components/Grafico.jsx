@@ -10,24 +10,11 @@ const Grafico = ({ localizacoes }) => {
     const uf = Object.keys(contagemUF)
     const qtde = Object.values(contagemUF)
 
-    const documentStyle = getComputedStyle(document.documentElement);
-
     const data = {
         labels: uf,
         datasets: [
             {
                 data: qtde,
-                backgroundColor: [
-                    documentStyle.getPropertyValue('--red-500'),
-                    documentStyle.getPropertyValue('--cyan-500'),
-                    documentStyle.getPropertyValue('--yellow-500'),
-                ],
-                hoverBackgroundColor: [
-                    documentStyle.getPropertyValue('--red-700'),
-                    documentStyle.getPropertyValue('--cyan-700'),
-                    documentStyle.getPropertyValue('--yellow-700')
-
-                ]
             }
         ]
     };
@@ -45,8 +32,8 @@ const Grafico = ({ localizacoes }) => {
     };
 
     return (
-        <div className="card flex justify-content-center" style={{ height: '100%' }}>
-            <Chart type="pie" data={data} options={options} className="w-full h-full" />
+        <div className="card flex justify-content-center w-full" >
+            <Chart type="pie" data={data} options={options}/>
         </div>
     );
 }

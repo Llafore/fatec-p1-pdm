@@ -54,21 +54,13 @@ export default class App extends Component{
   render() {
     return (
       <>
-        <div className='flex w-full'>
-            <div className="flex-column w-6 justify-content-center p-4">
-              <Busca onBuscaRealizada={this.onBuscaRealizada}/>
-              <LocalidadeLista localizacoes={
-                this.state.localidades.length === 0
-                ? this.state.localidadesChumbadas
-                : this.state.localidades
-                }/>
+        <div className='flex w-full flex-column lg:flex-row'>
+            <div className="flex-column w-full lg:w-6 justify-content-center p-4">
+              <Busca onBuscaRealizada={ this.onBuscaRealizada }/>
+              <LocalidadeLista localizacoes={ this.state.localidades }/>
             </div>
-            <div className="flex-column w-6 justify-content-center p-4">
-              <Grafico localizacoes={
-                  this.state.localidades.length === 0
-                  ? this.state.localidadesChumbadas
-                  : this.state.localidades
-                  }/>
+            <div className="flex-column w-full lg:w-6 justify-content-center p-4">
+              <Grafico localizacoes={ this.state.localidades }/>
             </div> 
         </div>
       </>
