@@ -7,22 +7,6 @@ import Grafico from "./components/Grafico.jsx"
 export default class App extends Component{
 
   state = {
-    localidadesChumbadas: [
-      {
-        "cep": "04094-050",
-        "logradouro" : "Avenida Pedro Álvares Cabral",
-        "localidade": "Parque Ibirapuera",
-        "estado": "São Paulo",
-        "uf": "SP"
-      },
-      {
-        "cep": "55592-970",
-        "logradouro" : "Rua dos Navegantes",
-        "localidade": "Vila de Porto de Galinhas",
-        "estado": "Ipojuca",
-        "uf": "PE"
-      }
-    ],
     localidades: []
   }
 
