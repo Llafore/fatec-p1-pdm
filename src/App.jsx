@@ -27,11 +27,6 @@ export default class App extends Component{
   }
 
   onBuscaRealizada = (cep) => {
-    if (cep == "") {
-      alert("CEP inválido!")
-      return
-    }
-
     let validacep = /^[0-9]{8}$/;
     if (!validacep.test(cep)) {
       alert("CEP inválido!")
